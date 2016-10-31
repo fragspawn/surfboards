@@ -1,0 +1,374 @@
+/*
+Theme Name:		Matt's Surfboards v1.0
+Author:			TAFE Queensland
+Date:			October 2015
+Description:	A clean and simple custom CSS design for the Matt's Surfboards website
+*/
+
+/* general */
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family:Arial, sans-serif;
+	font-weight:400;
+	font-size:14px;
+	line-height:25px;
+	color:#242424;
+	background-color:#2c2c2c;
+}
+
+/* ensure HTML5 semantic elements work in older browsers */
+header, section, footer, aside, nav, article, figure
+{
+display: block;
+} 
+
+/* fonts */
+@font-face{
+	font-family:'Archivo Narrow';
+	src:url(../fonts/ArchivoNarrow-Regular.ttf);
+}
+
+/* header */
+#top {
+	font-family:'Archivo Narrow', sans-serif;
+	text-transform:uppercase;
+	text-align:right;
+	padding:10px 0;
+	padding:10px 0;
+	background-color:#ccc;
+}
+
+.logo{
+	padding:18px 0 0 0;
+}
+
+#banner{
+	background-color:#ffffff;
+}
+
+#banner img{
+	max-height:700px;
+	width:100%;
+}
+
+/* nav */
+nav{
+	font-family:'Archivo Narrow', sans-serif;
+	text-transform:uppercase;
+	font-size:16px;
+	background-color:#ffffff;
+}
+
+nav ul{
+	list-style:none;
+	text-align:right;
+	padding:18px 0;
+}
+
+nav ul li{
+	display:inline;
+	padding: 0 0 0 20px;
+}
+
+.icon{
+	margin:0 0 0 5px;
+}
+
+.cart{
+	background-image:url('../images/cart.png');
+	background-repeat:no-repeat;
+	background-position:left center;
+	padding:0;
+}
+
+/* category */
+#category{
+	width:100%;
+	margin:40px 0 0 0;
+	clear:both;
+}
+
+.category{
+	width:200px;
+	height:240px;
+	float:left;
+	text-align:center;
+	margin:20px 50px 20px 0;
+}
+
+/* content */
+#main{
+	background-color:#ffffff;
+}
+
+.content{
+	padding:40px 0;
+}
+
+.noBanner{
+	height:60px;
+	border-bottom:1px solid #ccc;
+}
+
+/* item */
+.item{
+	margin:20px 0;
+	overflow:hidden;
+}
+
+.itemImage{
+	float:left;
+	width:30%;
+}
+
+.itemDetails{
+	float:left;
+	width:60%;
+}
+
+.itemPrice{
+	font-size:20px;
+	margin: 20px 0;
+}
+
+/* items */
+.items{
+	width:200px;
+	height:500px;
+	float:left;
+	text-align:center;
+	margin:20px 50px 20px 0;
+}
+
+/* login */
+.login{
+	width:100%;
+	height:525px;
+	margin:auto;
+	padding:40px;
+	background-color:#fff;
+}
+
+/* footer */
+footer{
+	color:#bdbdbd;
+}
+
+#info{
+	padding:40px 0;
+	background-color:#333;
+	overflow:hidden;
+}
+
+#copyright{
+	background-color:#2c2c2c;
+	overflow:hidden;
+}
+
+.copyright{
+	text-align:right;
+	font-size:12px;
+	padding:18px 0;
+}
+
+.phone{
+	font-size:18px;
+}
+
+/* headings */
+h1, h2, h3{
+	font-family:'Archivo Narrow', sans-serif;
+	text-transform:uppercase;
+}
+
+h1{
+	font-size:22px;
+	color:#2c2c2c;
+}
+
+h2{
+	font-size:18px;
+	color:#2c2c2c;
+}
+
+/* links */
+a:link, a:visited{
+	color:#242424;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#242424;
+	text-decoration:underline;
+}
+
+footer a:link, footer a:visited{
+	color:#bdbdbd;
+	text-decoration:none;
+}
+
+footer a:hover{
+	color:#bdbdbd;
+	text-decoration:underline;
+}
+
+.red a:hover{
+	color:#b30000;
+	text-decoration:none;
+}
+
+/* images */
+img{
+	border:0;
+}
+
+/* table */
+table{
+	width:100%;
+	border-collapse:collapse;
+	text-align:left;
+	margin:20px 0 10px 0;
+}
+
+th{
+	font-family:'Archivo Narrow', sans-serif;
+	text-transform:uppercase;
+	font-weight:400;
+	background-color:#ccc;
+	padding:0 10px;
+}
+
+td{
+	padding:15px 10px 10px 10px;
+}
+
+td{
+	border-bottom:1px solid #ccc;
+}
+
+.tableLeft{
+	float:left;
+	width:79%;
+	margin:20px 0 0 0;
+}
+
+.tableRight{
+	float:right;
+	width:19%;
+	margin:20px 0 0 0;
+}
+
+.total{
+	font-size:18px;
+}
+
+/* forms */
+input[type="submit"], .blue input[type="button"] {
+	background-color:#4a95d4;
+	border-radius:6px;
+	color:#fff;
+	font-size:16px;
+	cursor:pointer;
+	text-align:center;
+	padding:4px;
+	margin: 20px 0 20px 0;
+	border:none;
+	height:auto;
+	width:170px;
+}
+
+input[type="submit"]:hover, .blue input[type="button"]:hover{
+	background-color: #73adee;
+}
+
+input[type="button"]{
+	background-color:#333;
+	border-radius:6px;
+	color:#fff;
+	font-size:16px;
+	cursor:pointer;
+	text-align:center;
+	padding:4px;
+	margin:0;
+	border:none;
+	height:auto;
+	width:170px;
+}
+
+input[type="button"]:hover {
+	background-color: #555;
+}
+
+form{
+	margin:15px 0 40px 0;
+}
+
+input{
+	width:300px;
+	height:25px;
+	margin:5px 0 5px 0;
+	border:solid #ccc 1px;
+	padding:4px;
+	font-size:14px;
+}
+
+select{
+	width:60px;
+	height:35px;
+	margin:5px 0 5px 0;
+	border-radius:6px;
+	border:solid #ccc 1px;
+	padding:4px;
+	font-size:16px;
+}
+
+/* common classes */
+.container{
+	width:1000px;
+	margin:auto;
+	overflow:hidden;
+}
+
+.left{
+	float:left;
+	width:49%;
+}
+
+.right{
+	float:right;
+	width:49%;
+}
+
+.center{
+	text-align:center;
+}
+
+.marginTop20{
+	margin-top:20px;
+}
+
+.red{
+	color:#b30000;
+}
+
+.error{
+	width:95%;
+	color:#f4898f;
+	background-color:#f8e5e2;
+	padding:5px;
+	margin:5px;
+	text-align:center;
+}
+
+.success{
+	width:95%;
+	color:#4da547;
+	background-color:#e5f3e4;
+	padding:5px;
+	margin:5px;
+	text-align:center;
+}

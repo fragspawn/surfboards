@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+	<title>Matt's Surfboards</title>
+	<!-- link to favicon -->
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- link to CSS -->
+    <link rel="stylesheet" href="css/main.css">
+	
+	<!-- enable HTML5 in IE 8 and below -->
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+</head>
+
+<body>
+
+	<header>
+		<section id="top">
+			<div class="container">
+				<p><a href="invoices.html">My Account</a>  | <a href="auth.html">Login</a> | <a href="auth.html">Register</a></p>
+			</div> <!-- end container -->
+		</section> <!-- end top -->
+		
+		<nav class="noBanner">
+			<div class="container">
+				<div class="left">
+					<p class="logo"><img src="images/logo.png" alt="logo"></p>
+				</div> <!-- end left -->
+				<div class="right">
+					<ul>
+						<li class="active"><a href="home.html">Home</a></li>
+						<li><a href="items.html">Shop</a></li>
+						<li><img src="images/cart.png" alt="cart icon"><span class="icon"><a href="cart.html">My Cart</a></span></li>
+					</ul>
+				</div> <!-- end right -->
+			</div> <!-- end container -->
+		</nav>	
+	
+	</header>
+		
+	<section id="main">
+		<div class="container content">
+			<h1>My Account</h1>
+				
+				<div class="left">
+					<h2 class="marginTop20">Personal Details</h2>
+					<form action="#" method="post">
+						<input type="text" name="firstName" id="firstName" value="Julian" placeholder="Enter your first name" /><br />
+						<input type="text" name="lastName" id="lastName" value="Brown" placeholder="Enter your last name" /><br />
+						<input type="email" name="email" id="email" value="julian@bigpond.com" placeholder="Enter your email address*" required /><br />
+						<input type="tel" name="phone" id="phone" placeholder="Enter your phone number" pattern=".{10,}" title="Include your area code. Numbers only." /><br />
+						<input type="text" name="street" id="street" value="213 Queen Street" placeholder="Enter your street address" /><br />
+						<input type="text" name="suburb" id="suburb" value="Brisbane" placeholder="Enter your suburb" /><br />
+						<input type="text" name="postcode" id="postcode" value="4000" placeholder="Enter your postcode" pattern=".{4,}" title="Minimum of 4 characters." /><br />
+						<p><input type="submit" name="updatedetails" value="Update Details" /></p>
+					</form>
+				</div> <!-- end left -->	
+				
+				<div class="right">
+					<h2 class="marginTop20">My Invoices</h2>
+					<table>
+						<tr>
+							<th>Reference</th>
+							<th>Purchase Date</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td>00001</td>
+							<td>01/10/15</td>
+							<td><a href="invoice.html">View</a></td>
+						</tr>
+						<tr>
+							<td>00002</td>
+							<td>03/10/15
+							<td><a href="invoice.html">View</a></td>
+						</tr>
+						<tr>
+							<td>00003</td>
+							<td>10/10/15
+							<td><a href="invoice.html">View</a></td>
+						</tr>
+					</table>
+				
+				</div> <!-- right -->
+				
+		</div> <!-- end container -->
+	</section> <!-- end main -->		
+		
+	<footer>
+			<section id="info">
+				<div class="container">
+					<div class="left">
+						<h3>Contact</h3>
+						<p>Matt's Surfboards<br />
+						PO Box 344<br />
+						Caloundra Qld 4511<br />
+						<span class="phone">1800 222 901</span><br />
+						<a href="mailto:info@mattssurfboards.com">info@mattssurfboards.com</a></p>
+					</div> <!-- end left -->
+					<div class="right">
+						<h3>About</h3>
+						<p>Matt's Surfboards was founded in 2009 by Matt Johnson. Matt is an avid surfer. He caught his first wave at age three. His vision is to share his passion for serious surf gear with the surfing community.</p>
+					</div> <!-- end right -->
+				</div> <!-- end container -->
+			</section> <!-- end info -->
+
+			<section id="copyright">
+				<div class="container">
+					<div class="left">
+						<p class="logo"><img src="images/logoFooter.png" alt="logo"></p>
+					</div> <!-- end left -->
+					<div class="right">
+						<p class="copyright">Matt's Surfboards &copy; 2015</p>
+					</div> <!-- end right -->
+				</div> <!-- end container -->
+			</section> <!-- end copyright -->
+	</footer>
+
+</body>
+</html>
