@@ -23,6 +23,7 @@ function cart_item_remove($item) {
             unset($_SESSION['cart_items']);
         } else {
             unset($_SESSION['cart_items'][$key]);
+            $_SESSION['cart_items'] = array_values($_SESSION['cart_items']);
         }
     }
 }

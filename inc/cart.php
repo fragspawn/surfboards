@@ -30,7 +30,7 @@
                         <select name="itemqty">
 
                             <?php
-                            for ($loop = 0; $loop <= 10; $loop++) {
+                            for ($loop = 0; $loop <= $row['stock']; $loop++) {
                                 echo '<option value="' . $loop . '" ';
 
                                 if ($an_item[1] == $loop) {

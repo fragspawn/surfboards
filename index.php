@@ -212,7 +212,6 @@ if ($user_type == 'authen') {
             break;
     }
 }
-
 include('inc/footer.php');
 ?>
 

@@ -31,6 +31,16 @@ if ($item_id) {
             
             <input type="file" name="filetoupload" id="filetoupload" accept="image/png, image/gif, image/jpeg"><br/>
             <img src="images/<?php echo $row['ItemImage']; ?>" alt="<?php $row['ItemDesc']; ?>" width="100" height="150" >
+            <p><select name="qty">
+            <?php 
+            for($loop=0;$loop<100;$loop++) { 
+                if($row['stock'] == $loop) {
+                    echo '<option value="' . $loop . '" selected>' . $loop . '</option>';
+                } else { 
+                    echo '<option value="' . $loop . '">' . $loop . '</option>';
+                }
+            } ?>
+            </select> QTY</p>
             <p><input type="submit" name="updatedetails" value="Update Details" /></p>
         </form>
     </div> <!-- end left -->	
@@ -53,6 +63,12 @@ if ($item_id) {
             </select><br/>
 
             <input type="file" name="filetoupload" id="filetoupload" accept="image/png, image/gif, image/jpeg"><br/>
+            <p><select name="qty">
+            <?php 
+            for($loop=0;$loop<100;$loop++) { 
+                echo '<option value="' . $loop . '">' . $loop . '</option>';
+            } ?>
+            </select> QTY</p>
             <p><input type="submit" name="updatedetails" value="Add Details" /></p>
         </form>
     </div> <!-- end left -->
