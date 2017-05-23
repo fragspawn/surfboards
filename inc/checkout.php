@@ -18,7 +18,12 @@ $row = $res->fetch(PDO::FETCH_ASSOC);
         <p><input type="submit" name="updatedetails" value="Update Details" /></p>
     </form>
 </div> <!-- end left -->	
-
+    <div class="right">
+        <h2 class="marginTop20">Order Details</h2>
+        <table>
+            <tr>
+                <th colspan="2">Your Order</th>
+            </tr>    
 <?php
 if (isset($_SESSION['cart_items'])) {
     $cart_total = 0;
@@ -26,21 +31,23 @@ if (isset($_SESSION['cart_items'])) {
         $sql = 'SELECT * FROM item WHERE ItemID = ' . $an_item[0];
         $res = do_sql($sql);
         $row = $res->fetch(PDO::FETCH_ASSOC);
+        echo "<tr>";
+        echo "<td>" . $row['ItemName'] . "</td>";
+        echo "<td>" . number_format(($row['ItemPrice'] - ($row['ItemPrice']/11)), 2, '.', ',') . "</td>";
+        echo "</tr>"; 
         $subtotal = $row['ItemPrice'] * $an_item[1];
         $cart_total += $subtotal;
     }
     ?>
-
-    <div class="right">
-        <h2 class="marginTop20">Order Details</h2>
-        <table>
-            <tr>
-                <th colspan="2">Your Order</th>
-            </tr>
             <tr>
                 <td>Subtotal</td>
-                <td><?php echo number_format($cart_total, 2, '.', ','); ?></td>
+                <td><?php echo number_format(($cart_total - ($cart_total/11)), 2, '.', ','); ?></td>
             </tr>
+            <tr>
+                <td>GST</td>
+                <td><?php echo number_format(($cart_total/11), 2, '.', ','); ?></td>
+            </tr>
+            <!-- loop through cart here -->
             <tr>
                 <td>Shipping</td>
                 <td class="red">Free</td>

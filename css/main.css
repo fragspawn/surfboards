@@ -32,7 +32,9 @@ header, section, footer, aside, nav, article, figure
     font-family:'Archivo Narrow';
     src:url(../fonts/ArchivoNarrow-Regular.ttf);
 }
-
+td:last-child(2) {
+    text-align: right;
+}
 /* header */
 #top {
     font-family:'Archivo Narrow', sans-serif;
