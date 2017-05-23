@@ -46,7 +46,7 @@ $row = $res->fetch(PDO::FETCH_ASSOC);
         </tr>
 
         <?php
-        $sql3 = 'SELECT * FROM Invoice_item WHERE InvItemInvoiceID = ' . $row2['InvoiceID'];
+        $sql3 = 'SELECT * FROM invoice_item WHERE InvItemInvoiceID = ' . $row2['InvoiceID'];
         $res3 = do_sql($sql3);
         $invoice_total = 0;
         while ($row3 = $res3->fetch(PDO::FETCH_ASSOC)) {

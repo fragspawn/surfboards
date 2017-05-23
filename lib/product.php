@@ -37,12 +37,19 @@ function edit_product($product) {
     } else {
         $image_filename = '';
     }
-
-    $sql = "UPDATE item SET ItemCategoryID = " .
+    if($image_filename == '') {
+        $sql = "UPDATE item SET ItemCategoryID = " .
+            $category . ", ItemName = '" . $label . "', ItemDesc = '" . $desc .
+            "', ItemPrice = '" . $price .
+            "', stock = " . $qty .
+            " WHERE ItemID = " . $product;
+    } else {
+        $sql = "UPDATE item SET ItemCategoryID = " .
             $category . ", ItemName = '" . $label . "', ItemDesc = '" . $desc .
             "', ItemImage = '" . $image_filename . "', ItemPrice = '" . $price .
             "', stock = " . $qty .
             " WHERE ItemID = " . $product;
+    }
 
     $row_result = do_sql($sql);
 }

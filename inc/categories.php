@@ -3,7 +3,7 @@
     <h1>Shop by Category</h1>
 
     <?php
-    $sql = "SELECT * FROM category";
+    $sql = "SELECT * FROM category WHERE CategoryID IN (SELECT ItemCategoryID FROM item)";
     $row_result = do_sql($sql);
 
     while ($row = $row_result->fetch(PDO::FETCH_ASSOC)) {
@@ -21,6 +21,3 @@
                    ?>
 
                    </section> <!-- end category -->
-
-
-

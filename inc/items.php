@@ -14,7 +14,7 @@ if ($item_id) {
         <form action="index.php?pageid=updateprod" method="post" enctype="multipart/form-data">
             <input type="text" name="label" id="label" value="<?php echo $row['ItemName']; ?>"  placeholder=" Item Name" required/><br />
             <input type="text" name="description" id="description" value="<?php echo $row['ItemDesc']; ?>" placeholder="Item Description" required /><br />
-            <input type="text" name="price" id="price" value="<?php echo $row['ItemPrice']; ?>" placeholder="Item Price" required /><br />        
+            <input type="number" name="price" id="price" value="<?php echo $row['ItemPrice']; ?>" placeholder="Item Price" required /><br />        
             <input type="hidden" name="itemid" value="<?php echo $row['ItemID']; ?>"/>       
             
             <select name="category" style="width: 200px">
@@ -52,7 +52,7 @@ if ($item_id) {
         <form action="index.php?pageid=newprod" method="post" enctype="multipart/form-data">
             <input type="text" name="label" id="label" placeholder=" Item Name" required/><br />
             <input type="text" name="description" id="description"  placeholder="Item Description" required /><br />
-            <input type="text" name="price" id="price"  placeholder="Item Price" required /><br />        
+            <input type="number" name="price" id="price"  placeholder="Item Price" required /><br />        
             <select name="category" style="width: 200px">
                 <?php
                 while ($row_cat = $res_cat->fetch(PDO::FETCH_ASSOC)) {

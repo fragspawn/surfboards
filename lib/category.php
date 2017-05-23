@@ -30,10 +30,14 @@ function edit_cat($category) {
     } else {
         $image_filename = '';
     }
-
-    $sql = "UPDATE category SET CategoryLabel = '" .
+    if($image_filename == '') {
+        $sql = "UPDATE category SET CategoryLabel = '" .
+            $label . "', CategoryDesc = '" . $desc . "' WHERE CategoryID = " . $category;
+    } else {
+        $sql = "UPDATE category SET CategoryLabel = '" .
             $label . "', CategoryDesc = '" . $desc . "', CategoryImage = '" . $image_filename .
             "' WHERE CategoryID = " . $category;
+    }
 
     $row_result = do_sql($sql);
 }

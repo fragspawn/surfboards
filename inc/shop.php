@@ -1,14 +1,13 @@
 <?php
 if ($category_id) {
-    $sql = 'select * from item where ItemCategoryID = ' . $category_id;
+    $sql = 'SELECT * FROM item WHERE ItemCategoryID = ' . $category_id;
 } else {
-    $sql = 'select * from item order by ItemLastUpdate DESC LIMIT 3';
+    $sql = 'SELECT * FROM item WHERE stock > 0 ORDER BY ItemLastUpdate DESC LIMIT 3';
 }
 
 $row_result = do_sql($sql);
 
 while ($row = $row_result->fetch(PDO::FETCH_ASSOC)) {
-    if($row['stock'] > 0) {
     ?>
         <div class="items">
             <div class="itemsImage">
@@ -25,6 +24,5 @@ while ($row = $row_result->fetch(PDO::FETCH_ASSOC)) {
         </div> <!-- end item -->
 
 <?php 
-    } // if
 } // while
 ?>
