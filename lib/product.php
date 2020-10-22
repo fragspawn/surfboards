@@ -54,4 +54,3 @@ function edit_product($product) {
     $row_result = do_sql($sql);
 }
 ?>
-

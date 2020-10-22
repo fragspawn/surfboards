@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="utf-8" />
         <title>Matt's Surfboards</title>
@@ -76,7 +75,7 @@
                     </div> <!-- end right -->
                 </div> <!-- end container -->
             </nav>	     
+        <div class="container content">
             <?php
         }
         ?>
-        <div class="container content">

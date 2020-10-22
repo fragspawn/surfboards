@@ -31,4 +31,3 @@ function create_invoice() {
     } 
 }
 ?>
-

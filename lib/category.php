@@ -42,4 +42,3 @@ function edit_cat($category) {
     $row_result = do_sql($sql);
 }
 ?>
-

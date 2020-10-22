@@ -19,6 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `surfboards`
 --
+GRANT ALL PRIVILEGES ON surfboards.* TO surfboarduser@localhost IDENTIFIED BY 'surfboardpass';
 
 -- --------------------------------------------------------
 

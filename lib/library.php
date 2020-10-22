@@ -7,7 +7,7 @@ include('lib/category.php');
 include('lib/product.php');
 
 function do_sql($sql_string) {
-    $connection = new PDO("mysql:host=localhost;dbname=surfboards", 'root', '');
+    $connection = new PDO("mysql:host=127.0.0.1;dbname=surfboards", 'surfboarduser', 'surfboardpass');
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     try {
         $row_result = $connection->query($sql_string);
@@ -22,7 +22,7 @@ function do_sql($sql_string) {
 }
 
 function do_insert_sql($sql_string) {
-    $connection = new PDO("mysql:host=localhost;dbname=surfboards", 'root', '');
+    $connection = new PDO("mysql:host=127.0.0.1;dbname=surfboards", 'surfboarduser', 'surfboardpass');
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     try {
         $row_result = $connection->query($sql_string);
@@ -63,5 +63,4 @@ function hash_pass($cleartext_pass, $crypted_pass) {
         }
     }
 }
-
 ?>

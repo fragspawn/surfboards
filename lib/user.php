@@ -94,4 +94,3 @@ function delete_user($user) {
     return true;
 }
 ?>
-

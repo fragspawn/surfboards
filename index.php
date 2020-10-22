@@ -1,6 +1,8 @@
 <?php
 
 session_start();
+ob_start();
+
 
 include('lib/library.php');
 
@@ -213,5 +215,6 @@ if ($user_type == 'authen') {
     }
 }
 include('inc/footer.php');
+ob_end_flush();
 ?>
 

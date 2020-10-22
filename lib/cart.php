@@ -1,5 +1,4 @@
 <?php
-
 function cart_item_add($item) {
     if (isset($_SESSION['cart_items'])) {
         $key = array_search($item, array_column($_SESSION['cart_items'], 0));
@@ -46,5 +45,3 @@ function cart_empty() {
     unset($_SESSION['cart_items']);
 }
 ?>
-
-
