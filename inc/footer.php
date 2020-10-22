@@ -1,6 +1,6 @@
 </div> <!-- container content -->
 
-
+<div class="clearall"></div>
 <footer>
     <section id="info">
         <div class="container">

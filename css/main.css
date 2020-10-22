@@ -26,6 +26,9 @@ header, section, footer, aside, nav, article, figure
 {
     display: block;
 } 
+.clearall {
+    clear: both;
+}
 
 /* fonts */
 @font-face{
